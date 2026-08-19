@@ -16,6 +16,6 @@ public class palindromePrime{
         return isPalindromeAndPrime;        
 
     }
-    
+    public static boolean isPrime()
     
 }
