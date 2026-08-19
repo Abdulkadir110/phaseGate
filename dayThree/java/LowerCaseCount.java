@@ -1,18 +1,18 @@
-public class UpperCaseCount {
+public class LowerCaseCount {
     
     public static void main(String[] args) {
         
         String word = "Hello";
         String [] wordArray = word.split("");
-        int upperCaseCount = 0;
+        int LowerCaseCount = 0;
         
         
         for (int index = 0; index < word.length(); index++) {
-            if(wordArray[index].equals(wordArray[index].toUpperCase())){
-                upperCaseCount++;
+            if(wordArray[index].equals(wordArray[index].toLowerCase())){
+                LowerCaseCount++;
             }
         }
        
-        System.out.println(upperCaseCount);
+        System.out.println(LowerCaseCount);
     }
 }

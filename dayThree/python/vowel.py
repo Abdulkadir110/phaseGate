@@ -8,6 +8,5 @@ for letter in word :
         count += 1
         print(count)
         break
-    count += 1
 
 
