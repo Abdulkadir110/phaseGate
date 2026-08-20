@@ -1,26 +1,29 @@
 public class DistinctCharactersCount {
 
     public static void main(String[] args) {
-        String word = "abcdef";
-        
+        String word = "a111BAcb";
+        System.out.println(countDistinct(word));
     }
-    public static int countUpperCase(String  word) {
-        int upperCount = 0;
-        String upper= "ABCDEFGHIJKLMNOPQURSTUVWXYZ"
-        for(int index = 0; index < word.length(); index++) {
-            for(int upperIndex = 0; upperIndex < upper.length(); upperIndex++){
-                if(word.charAt(index) == upper.charAt(upperIndex)) {
-                    upperCount++;
-                    break;
+    public static int countDistinct(String  word) {
+        String lowerWord = word.toLowerCase();
+        int total = 0;
+        String alnum = "abcdefghijklmnopqrstuvwxyz0123456789";
+        int duplicateCounter = 0; 
+        for(int index = 0; index < alnum.length(); index++) {
+            char character = alnum.charAt(index);
+            duplicateCounter = 0;
+            for(int secondIndex = 0; secondIndex < word.length(); secondIndex++){
+                if(character == lowerWord.charAt(secondIndex)) {
+                    duplicateCounter++;
                 }
             }
             
+            if(duplicateCounter > 1) {
+                total++;
+            }
+            
         }
-        return upperCount;
-    }
-    public static int countLowerCase(String word) {
-        int lowerCount = 0;
-        
+        return total;
     }
     
 }
