@@ -33,7 +33,7 @@ while options != 4 :
             if amount > balance :
                 print("Withdrawal failed: insufficent funds")
                 break
-                
+             
             newBalance = withdraw(amount, balance, "")
             print(f"Withdrew: ₦{amount} | New Balance: ₦{newBalance}")
 

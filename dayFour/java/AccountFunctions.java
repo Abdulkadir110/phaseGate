@@ -6,7 +6,7 @@ public class AccountFunctions {
     public static double deposit(double amount, double balance, String transactions) {
         double newBalance = 0;
         newBalance = balance + amount;
-
+        
         transactions = "Deposited: ₦" + amount + "| New Balance: ₦" + balance;
 
         return newBalance;
@@ -15,6 +15,9 @@ public class AccountFunctions {
         double newBalance = 0;
         if(amount <= balance) {
             newBalance = balance - amount;
+        }
+        else{
+            newBalance = balance;
         }
         return newBalance;
     }

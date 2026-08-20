@@ -28,6 +28,7 @@ public class AccountFunctionsMain{
                     amount = input.nextDouble();
                     newBalance = AccountFunctions.deposit(amount, balance, "");
                     System.out.printf("Deposited: ₦%.2f | New Balance: ₦%.2f%n", amount, newBalance);
+                    
                     break;
                 }
                 case 2 : {

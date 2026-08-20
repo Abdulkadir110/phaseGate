@@ -10,10 +10,11 @@ def deposit(amount,balance, transactions) :
     return newBalance;
     
 def withdraw(amount,balance, transactions) :
-    newBalance = balance;
-    if(amount <= balance) :
+    newBalance = 0;
+    if amount <= balance :
         newBalance = balance - amount;
-
+    else :
+        newBalance = balance
     return newBalance;
 
 def store_transaction(amount, balance):

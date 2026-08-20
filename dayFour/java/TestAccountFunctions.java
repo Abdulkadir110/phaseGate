@@ -24,11 +24,36 @@ public class TestAccountFunctions {
         assertEquals(expected, actual);
     }
     @Test
+    public void testThatTheUserDepositedTwice(){
+        double balance = 0.0;
+        double depositAmount = 5000;
+        balance = AccountFunctions.checkBalance(balance);
+        double firstDeposit = AccountFunctions.deposit(depositAmount,balance, "");
+        balance = AccountFunctions.checkBalance(firstDeposit);
+        double secondDeposit = AccountFunctions.deposit(5000, balance, "");
+        double expected = AccountFunctions.checkBalance(secondDeposit);
+        double actual = 10000;
+        
+        assertEquals(expected, actual);
+    }
+    @Test
     public void testThatWithdrawIsDeductedFromTheUpdatedBalance() {
         double withdrawAmount = 2000;
         double balance = AccountFunctions.deposit(5000, 0.0, "" );
         double expected = AccountFunctions.withdraw(withdrawAmount, balance, "");
         double actual = 3000;
+        
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void testThatTheUserWithdrawTwiceFromTheUpdatedBalance() {
+        double withdrawAmount = 2000;
+        double balance = AccountFunctions.deposit(5000, 0.0, "" );
+        double firstWithdraw = AccountFunctions.withdraw(withdrawAmount, balance, "");
+        balance = AccountFunctions.checkBalance(firstWithdraw);
+        double second_withdraw = AccountFunctions.withdraw(1000, balance, "");
+        double expected = AccountFunctions.checkBalance(second_withdraw);
+        double actual = 2000;
         
         assertEquals(expected, actual);
     }
