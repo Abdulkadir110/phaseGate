@@ -3,6 +3,7 @@ let number = 0;
 let sum = 0;
 let average = 0;
 let count = 1;
+let averagecount = 0;
 while(count <= 10){
     let number = Number(prompt("Enter a number: "));
     if(number < 0 || number > 100){
@@ -10,10 +11,11 @@ while(count <= 10){
     }
     else {
     sum += number;
+    averagecount++;
     }
     count++;
 }
-average = sum / count ;
+average = sum / averagecount ;
 console.log("average is: " +  average);
 
 
