@@ -1,13 +1,13 @@
-  public class StringOfBracket {
-    public static boolean allBracketAreClosed(String characters){
+
+    function allBracketAreClosed(characters){
         if(isCurlyBracket(characters) || isDiamond(characters) || isParenthesis(characters) || isSquareBracket(characters)){
             return true;
         }
         return false;
     }
-    public static boolean isCurlyBracket(String characters){
-        int count = 0;
-        for(int index = 0; index < characters.length(); index++){
+    function isCurlyBracket( characters){
+        let count = 0;
+        for(let index = 0; index < characters.length(); index++){
             if(characters.charAt(index) == '{'){
                 count++;
             }
@@ -18,9 +18,9 @@
         
         return count == 2;
     }
-    public static boolean isSquareBracket(String characters){
-        int count = 0;
-        for(int index = 0; index < characters.length(); index++){
+    function isSquareBracket( characters){
+        let count = 0;
+        for(let index = 0; index < characters.length(); index++){
             if(characters.charAt(index) == '['){
                 count++;
             }
@@ -31,9 +31,9 @@
         
         return count == 2;
     }
-    public static boolean isParenthesis(String characters){
-        int count = 0;
-        for(int index = 0; index < characters.length(); index++){
+    function isParenthesis( characters){
+        let count = 0;
+        for(let index = 0; index < characters.length(); index++){
             if(characters.charAt(index) == '('){
                 count++;
             }
@@ -44,9 +44,9 @@
         
         return count == 2;
     }
-    public static boolean isDiamond(String characters){
-        int count = 0;
-        for(int index = 0; index < characters.length(); index++){
+    function isDiamond( characters){
+        let count = 0;
+        for(let index = 0; index < characters.length(); index++){
             if(characters.charAt(index) == '<'){
                 count++;
             }
@@ -57,4 +57,3 @@
         
         return count == 2;
     }
-}
